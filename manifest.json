@@ -1,0 +1,30 @@
+{
+    "manifest_version": 2,
+    "name": "Robux to Currency",
+    "version": "0.1",
+    "background": {
+      "scripts": ["background.js"]
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://roblox.com/*",
+                "https://www.roblox.com/*"
+            ],
+            "js": ["convert.js"]
+        }
+    ],
+    "icons": {
+        "16": "icon_16.png",
+        "48": "icon_48.png",
+        "128": "icon.png"
+    },
+    "browser_action": {
+        "default_icon": "icon_dollar.png",
+        "default_title": "Visit a Roblox page to convert Robux"
+    },
+    "permissions": [
+        "storage",
+        "https://api.exchangeratesapi.io/*"
+    ]
+}
